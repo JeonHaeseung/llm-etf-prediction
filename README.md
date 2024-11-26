@@ -35,3 +35,6 @@ To check the result graph, you can run `result.py`.
 ```python
 python3 result.py
 ```
+
+## 📊 Dataset
+Stock price datasets can be retrieved via API calls using Python's `yfinance` library. Natural language description data for the LLM is hard-coded in `time-llm.py`. If you want to fetch descriptions for a new stock, search for the stock ticker on `https://money.usnews.com` and use the description provided.
