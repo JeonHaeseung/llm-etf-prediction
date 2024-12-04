@@ -1,5 +1,10 @@
 # llm-etf-prediction
 
+## ℹ️ About llm-etf-prediction
+Traditional sequence models, like RNNs and LSTMs, struggle to incorporate related data beyond time series for accurate forecasting. `Time-LLM` addresses this limitation by combining natural language-embedded domain knowledge with time series data, utilizing a pre-trained LLM for downstream tasks.
+
+In this project, Time-LLM is applied to predict the closing prices of `Exchange Traded Funds (ETFs)`. By embedding sector-specific information about the ETFs, such as the industries they track or their inherent market characteristics, the model aims to improve predictive accuracy and make more reliable ETF close price forecasting.
+
 ## ✅ How to run
 ![](assets/timellm-setup.png)
 ### 1) Prerequisites
