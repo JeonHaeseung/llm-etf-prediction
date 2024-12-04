@@ -1,6 +1,7 @@
 # llm-etf-prediction
 
 ## ✅ How to run
+![](assets/timellm-setup.png)
 ### 1) Prerequisites
 To run this model, the following prerequisites are required:
 - CUDA Version: 11.8
@@ -38,3 +39,12 @@ python3 result.py
 
 ## 📊 Dataset
 Stock price datasets can be retrieved via API calls using Python's `yfinance` library. Natural language description data for the LLM is hard-coded in `time-llm.py`. If you want to fetch descriptions for a new stock, search for the stock ticker on `https://money.usnews.com` and use the description provided.
+
+## 📈 Results
+| Metric | IYR  | KBE  | SMH    | IBB  | SPY  | GDX  |
+|--------|------|------|--------|------|------|------|
+| MAE    | 0.99 | 0.66 | 25.23  | 4.58 | 6.96 | 2.93 |
+| MSE    | 1.61 | 0.65 | 649.68| 21.77| 57.92| 11.15|
+| MAPE   | 0.01 | 0.01 | 0.09   | 0.03 | 0.01 | 0.07 |
+
+Time-LLM performed well with IYR and KBE, which follow relatively stable sectors. These ETFs exhibited the lowest error rates, likely due to their low variance and regular cycles, indicating that the model effectively utilized the domain knowledge provided. Conversely, SMH and GDX showed higher error rates, with SMH displaying the highest among all predictions. The results appear to stem from these sentiment-based judgments since sentiment analysis of the domain knowledge texts revealed instances where the tone was interpreted as positive or negative rather than completely neutral.
