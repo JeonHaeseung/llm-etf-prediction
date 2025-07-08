@@ -1,11 +1,14 @@
-# llm-etf-prediction
+<h1 align='center' style="text-align:center; font-weight:bold; font-size:2.0em;letter-spacing:2.0px;"> TimeLLM4Stock: Stock Market Prediction with TimeLLM </h1>
 
-## ℹ️ About llm-etf-prediction
+> [!NOTE]
+> This work is a project conducted as part of the Data Analysis course at Ewha Womans University.
+
+## About llm-etf-prediction
 Traditional sequence models, like RNNs and LSTMs, struggle to incorporate related data beyond time series for accurate forecasting. `Time-LLM` addresses this limitation by combining natural language-embedded domain knowledge with time series data, utilizing a pre-trained LLM for downstream tasks.
 
 In this project, Time-LLM is applied to predict the closing prices of `Exchange Traded Funds (ETFs)`. By embedding sector-specific information about the ETFs, such as the industries they track or their inherent market characteristics, the model aims to improve predictive accuracy and make more reliable ETF close price forecasting.
 
-## ✅ How to run
+## How to run
 ![](assets/timellm-setup.png)
 ### 1) Prerequisites
 To run this model, the following prerequisites are required:
@@ -42,7 +45,7 @@ To check the result graph, you can run `result.py`.
 python3 result.py
 ```
 
-## 📊 Dataset
+## Dataset
 Stock price datasets can be retrieved via API calls using Python's `yfinance` library. Natural language description data for the LLM is hard-coded in `time-llm.py`. If you want to fetch descriptions for a new stock, search for the stock ticker on `https://money.usnews.com` and use the description provided.
 
 ## 📈 Results
